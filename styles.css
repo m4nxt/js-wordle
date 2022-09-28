@@ -36,7 +36,6 @@ a {
 
 body {
     background-color: black; /* fallback */
-    overflow: hidden;
     color: white;
     font-family: 'source_code_proregular';
 }
@@ -93,11 +92,10 @@ body::before {
 }
 
 .gametitle {
-    margin-top: 80px;
+    margin-top: 100px;
     text-shadow: -5px 5px 20px black;
     font-size: 50px;
     text-align: center;
-    
 }
 
 .gamegrid {
@@ -105,20 +103,21 @@ body::before {
     backdrop-filter: blur(20px);
     margin: auto;
     width: 25%;
-    margin-top: 50px;
+    margin-top: -10px;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     border: 1px solid rgba(255, 255, 255, 1);
 }
 
 .gamegrid .item {
-    height: 35px;
-    width: 35px;
+    width: auto;
+    height: auto;
+    aspect-ratio: 1 / 1;
     background-color: rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255, 255, 255, 1);
-    padding: 20px;
-    font-size: 30px;
+    vertical-align: middle;
     text-align: center;
+    font-size: 3.2vw;
 }
 
 .playagain {

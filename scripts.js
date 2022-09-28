@@ -94,6 +94,11 @@ document.addEventListener("keypress", function onEvent(event) {
                     document.getElementById((j-1).toString()+i.toString()).style.background = 'rgba(0,255,0,0.35)';
                 }
             }
+
+            if (inplist.length == 6) {
+                window.location.replace("lost.html");
+            }
+
             input = "";
         }
         console.log(input)

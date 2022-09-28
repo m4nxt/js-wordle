@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'source_code_proregular';
+    src: url('sourcecodepro-regular-webfont.woff2') format('woff2'), url('sourcecodepro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@-webkit-keyframes backgroundZoomAnimate {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+  
+@keyframes backgroundZoomAnimate {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3)
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+a {
+    all: unset;
+    text-decoration: none;
+}
+
+body {
+    background-color: black; /* fallback */
+    overflow: hidden;
+    color: white;
+    font-family: 'source_code_proregular';
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: url(moon_clouds_sky_194112_3840x2160.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-animation: backgroundZoomAnimate 40s forwards;
+        animation: backgroundZoomAnimate 40s forwards;
+    -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+}
+
+.titlebar {
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    padding-top: 0px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 60px;
+}
+
+.titlebar .title {
+    position: absolute;
+    top: -5%;
+    display: inline;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.titlebar .link {
+    all: unset;
+    float: right;
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding: 1.5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+
+.titlebar .link:hover {
+    color:rgba(22, 27, 34, 1);
+    background-color: white;
+}
+
+.gametitle {
+    margin-top: 80px;
+    text-shadow: -5px 5px 20px black;
+    font-size: 50px;
+    text-align: center;
+    
+}
+
+.gamegrid {
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    margin: auto;
+    width: 25%;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.gamegrid .item {
+    height: 35px;
+    width: 35px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 1);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.playagain {
+    cursor: pointer;
+}
+
+.playagain {
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+    width: fit-content;
+    margin: auto;
+}
+
+.playagain a {
+    text-shadow: -2px 2px 5px black;
+}

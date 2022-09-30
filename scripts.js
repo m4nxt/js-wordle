@@ -3,13 +3,15 @@ const load = async (url) => {
         const response = await fetch(url);
         const data = await response.text();
         console.log(data);
+        return data;
     } catch (err) {
         console.error(err);
     }
 };
 
-const words = load("words.txt");
-        
+const words = Object.entries(load("https://raw.githubusercontent.com/m4nxt/wordle/main/words.txt"));
+console.log(typeof(words))
+
 var i = 0;
 var j = 0;
 var input = "";
